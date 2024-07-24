@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TransparenciaComponent } from './pages/transparencia/transparencia.component';
 import { CaftaComponent } from './pages/cafta/cafta.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
+
 @NgModule({
   declarations: [
     AppComponent,

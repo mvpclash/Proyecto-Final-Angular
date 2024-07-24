@@ -1,29 +1,12 @@
 <!-- PROYECTO FINAL ROY PORTILLO -->
-<main class="main-content">
+<body>
+    <main class="col-xl-4 col-sm-12 main-content">
     <div id="contenedor-articulos" class="content">
         <app-article></app-article>
     </div>
-    <app-sidebar></app-sidebar>
-    <!-- <aside class="sidebar">
-        <div class="widget">
-            <form class="formulario" [formGroup]="loginForm">
-                <div class="form-group">
-                    <label for="usuario">Usuario</label>
-                    <input formControlName="email" type="text" id="usuario" name="usuario" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Contraseña</label>
-                    <input formControlName="password" type="password" id="password" name="password" required>
-                </div>
-                <button class="btn" (click)="login()" id="enviar">Ingresar</button>
-            </form>
-            <button id="denuncias">Denuncias</button>
-        </div>
-        <div class="widget">
-            <button id="sihcal">SIHCAL</button>
-        </div>
-        <div class="widget">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/5hPLCK0m8Pg?si=fbAHnpawzq_bKMSR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div> -->
-    <!-- </aside> -->
+    <div id="contenedor-sidebar">
+        <app-sidebar></app-sidebar>
+    </div>
+    
 </main>
+</body>

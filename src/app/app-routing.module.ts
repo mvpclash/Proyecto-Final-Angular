@@ -12,6 +12,10 @@ const routes: Routes = [
   {path: 'transparencia', component:TransparenciaComponent},
   {path: 'cafta', component:CaftaComponent},
   {path: 'contacto', component:ContactoComponent},
+  {
+    path: '**',
+    redirectTo: '/index',
+  }
 ];
 
 @NgModule({
