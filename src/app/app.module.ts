@@ -13,6 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TransparenciaComponent } from './pages/transparencia/transparencia.component';
 import { CaftaComponent } from './pages/cafta/cafta.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
+import { CaftaContenidoComponent } from './components/cafta-contenido/cafta-contenido.component';
+import { TransparenciaContenidoComponent } from './components/transparencia-contenido/transparencia-contenido.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
     ArticleComponent,
     TransparenciaComponent,
     CaftaComponent,
-    ContactoComponent
+    ContactoComponent,
+    CaftaContenidoComponent,
+    TransparenciaContenidoComponent
   ],
   imports: [
     BrowserModule,
