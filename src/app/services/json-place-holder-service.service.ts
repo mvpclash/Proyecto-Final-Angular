@@ -11,8 +11,8 @@ export class JsonPlaceHolderService {
   constructor(private http: HttpClient) {
   }
 
-  obtenerDatos():Observable<JsonPlaceHolderModel[]> {
-    return this.http.get<JsonPlaceHolderModel[]>('https://jsonplaceholder.typicode.com/posts');
-  }
+  // obtenerDatos():Observable<JsonPlaceHolderModel[]> {
+  //   // return this.http.get<JsonPlaceHolderModel[]>('https://jsonplaceholder.typicode.com/posts');
+  // }
 
 }

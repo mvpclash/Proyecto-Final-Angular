@@ -17,16 +17,16 @@ export class IndexComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private _jsonPlaceHolderService: JsonPlaceHolderService
+    // private _jsonPlaceHolderService: JsonPlaceHolderService
   ) {}
 
   ngOnInit(): void {
     this.crearFormulario();
-    this._jsonPlaceHolderService.obtenerDatos().subscribe(
-      (data) => {
-        this.posts = data;
-      }
-    );
+    // this._jsonPlaceHolderService.obtenerDatos().subscribe(
+    //   (data) => {
+    //     this.posts = data;
+    //   }
+    // );
   }
 
 

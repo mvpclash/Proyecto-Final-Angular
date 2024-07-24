@@ -9,9 +9,8 @@ export class HeaderComponent implements OnInit {
 
   public urls : string[] = [
     'Inicio',
-    'Organización',
     'Transparencia',
-    'Carta',
+    'Cafta',
     'Contacto'
   ]
 

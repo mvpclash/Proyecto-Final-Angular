@@ -10,6 +10,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ArticleComponent } from './components/article/article.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TransparenciaPipe } from './transparencia.pipe';
+import { TransparenciaComponent } from './pages/transparencia/transparencia.component';
+import { CaftaComponent } from './pages/cafta/cafta.component';
+import { ContactoComponent } from './pages/contacto/contacto.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +21,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     IndexComponent,
     FooterComponent,
     SidebarComponent,
-    ArticleComponent
+    ArticleComponent,
+    TransparenciaPipe,
+    TransparenciaComponent,
+    CaftaComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
