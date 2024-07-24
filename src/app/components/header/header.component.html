@@ -1,13 +1,78 @@
 <header class="header">
-    <div class="logo">
+    <!-- <div class="logo">
         <img src="https://www.trabajo.gob.hn/wp-content/uploads/2023/11/cropped-cropped-314512310_489364863225936_2015983967601765690_n.png" alt="">
     </div>
-    <nav id="principal-menu" class="nav">
-        <ul class="menu" [class.is-open]="isMenuOpen">
+    <div class="menu_icon" [class.menu_iconClass]="menu_icon_variable" (click)="openMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav id="principal-menu" class="nav" [class.menuClasse]="menuVariable">
+        <ul class="menu">
             <li class="nav-item"><a class="nav-link" routerLink="index">Inicio</a></li>
             <li class="nav-item"><a class="nav-link" routerLink="transparencia">Transparencia</a></li>
-            <li class="nav-item"><a class="nav-link" routerLink="cafta">Cafta</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="cafta">CAFTA</a></li>
             <li class="nav-item"><a class="nav-link" routerLink="contacto">Contacto</a></li>
         </ul>
-    </nav>
+    </nav> -->
+    <!-- <div  class="container">
+
+        <div class="row">
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="logo">
+                <img src="" alt="">
+            </div>
+    
+          </div>
+    
+    
+          <div class="col-md-9 col-sm-9 col-9 text-end">
+    
+    
+          <div class="menu_icon" [class.menu_iconClass]="menu_icon_variable" (click)="openMenu()">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+    
+    
+            <div class="nav" [class.menuClasse]="menuVariable">
+              <ul>
+            <li class="nav-item"><a class="nav-link" routerLink="index">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="transparencia">Transparencia</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="cafta">CAFTA</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="contacto">Contacto</a></li>
+              </ul>
+            </div>
+    
+          </div>
+    
+        </div>
+    
+      </div> -->
+
+      <div class="container">
+        <div class="row">
+            <div class="">
+                 <div class="logo">
+                    <img src="https://www.trabajo.gob.hn/wp-content/uploads/2024/07/setrass-logo-fondo-blanco.png" alt="">
+                </div> 
+            </div>
+            <div class="col-md-9 col-sm-9 col-9 text-end">
+                <div class="menu-icon" (click)="openMenu()">
+                    <i class="{{menu_icon}}"></i>
+                </div>
+                <div class="desktop_menu" [class.mobile_menu]="menuValue">
+                    <ul>
+                        <li (click)="closeMenu()"><a class="nav-link" routerLink="index">Inicio</a></li>
+                        <li (click)="closeMenu()"><a class="nav-link" routerLink="transparencia">Transparencia</a></li>
+                        <li (click)="closeMenu()"><a class="nav-link" routerLink="cafta">CAFTA</a></li>
+                        <li (click)="closeMenu()"><a class="nav-link" routerLink="contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>

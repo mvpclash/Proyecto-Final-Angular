@@ -1,34 +1,115 @@
-.header {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    width: 100%;
-}
+// .header {
+//     font-family: Verdana, Geneva, Tahoma, sans-serif;
+//     text-align: center;
+//     width: 100%;
+// }
+// .logo {
+//      width: 90px;
+//        }
 
-.nav {
-    /* padding: 1rem 2rem; */
+// .logo:hover {
+//     cursor: pointer;
+//          }
+// .desktop_menu {
+//     /* padding: 1rem 2rem; */
+//     background: #59D0E1;
+//     color: white;
+//     margin-top: 10px;
+// }
+
+// .desktop_menu ul {
+   
+//     justify-content: center;
+//     list-style: none;
+//     padding: 0;
+//     margin:0;
+    
+// }
+
+// .desktop_menu ul li {
+//     padding: 1rem 2rem;
+//     transition: all ease .8s;
+//     border: solid #f4f4f4 1px;
+//     display: inline-block;
+//     margin-left: 24px;
+    
+// }
+
+// .desktop_menu ul li a {
+//     color: white;
+//     font-weight: bolder;
+//     text-decoration: none;
+//     list-style: none;
+// }
+
+// .desktop_menu ul li:hover{
+//     background-color: #cf2e2e;
+// }
+
+header {
+    padding: 10px;
     background: #59D0E1;
-    color: white;
-}
-
-.nav ul {
-    display: flex;
+    
+  }
+  .logo {
+    width: 90px;
+  }
+  .logo:hover {
+    cursor: pointer;
+  }
+  .desktop_menu {
     justify-content: center;
     list-style: none;
-}
-
-.nav ul li {
-    padding: 1rem 2rem;
-    transition: all ease .8s;
-    border: solid #f4f4f4 1px;
-}
-
-.nav ul li a {
+    
+    margin-top: 24px;
+  }
+  .desktop_menu ul {
+    padding: 0;
+    margin: 0;
+  }
+  .desktop_menu ul li {
+    list-style-type: none;
     color: white;
-    font-weight: bolder;
-    text-decoration: none;
-}
-
-.nav ul li:hover{
+    display: inline-block;
+    font-size: 18px;
+    margin-left: 26px;
+  }
+  .desktop_menu ul li:hover {
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
     background-color: #cf2e2e;
-}
-
+    transition: 0.3s ease-in-out;
+  }
+  .menu-icon {
+    display: none;
+  }
+  
+  @media screen and (min-width: 128px) and (max-width: 900px) {
+    .desktop_menu {
+      position: fixed !important;
+      right: -280px;
+      transition: 0.4s ease-in-out;
+      top: 64px;
+      background: #59D0E1;
+      width: 280px;
+      height: 100%;
+    }
+    .desktop_menu ul li {
+      display: block;
+      text-align: left;
+      margin: 0;
+      padding: 10px 0 10px 26px;
+      border-bottom: 1px solid grey;
+    }
+    .menu-icon {
+      display: block;
+      color: white;
+      font-size: 40px;
+      padding-top: 10px;
+    }
+    .mobile_menu {
+      right: 0;
+      transition: 0.4s ease-in-out;
+    }
+  }
