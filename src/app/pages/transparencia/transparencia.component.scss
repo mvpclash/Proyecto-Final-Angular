@@ -1,0 +1,35 @@
+body {
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+ }
+ 
+.main-content{
+    display: grid;
+    flex-direction:column;
+    width: 100%;
+}
+
+.content{
+    flex: 3;
+    padding: 1rem;
+}
+
+.content article{
+    margin-bottom: 2rem;
+}
+
+.content img {
+    max-width: 90%;
+    height: auto;
+}
+
+/*  PARA TABLET  */
+@media (min-width: 768px) {
+    .main-content{
+        display: flex;
+        flex-direction: row;
+    }
+}
