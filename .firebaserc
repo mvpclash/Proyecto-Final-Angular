@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "proyecto-back-angular"
+  },
+  "targets": {
+    "proyecto-back-angular": {
+      "hosting": {
+        "intro-angular": [
+          "proyecto-back-angular"
+        ]
+      }
+    }
+  }
+}

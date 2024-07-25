@@ -15,6 +15,13 @@ import { CaftaComponent } from './pages/cafta/cafta.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { CaftaContenidoComponent } from './components/cafta-contenido/cafta-contenido.component';
 import { TransparenciaContenidoComponent } from './components/transparencia-contenido/transparencia-contenido.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { NewFmdatosComponent } from './components/new-fmdatos/new-fmdatos.component';
+
 
 @NgModule({
   declarations: [
@@ -28,14 +35,19 @@ import { TransparenciaContenidoComponent } from './components/transparencia-cont
     CaftaComponent,
     ContactoComponent,
     CaftaContenidoComponent,
-    TransparenciaContenidoComponent
+    TransparenciaContenidoComponent,
+    NewFmdatosComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule, 
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideDatabase(() => getDatabase()),
+    provideFirestore(() => getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]
