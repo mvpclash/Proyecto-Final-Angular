@@ -1,58 +1,14 @@
-// .header {
-//     font-family: Verdana, Geneva, Tahoma, sans-serif;
-//     text-align: center;
-//     width: 100%;
-// }
-// .logo {
-//      width: 90px;
-//        }
-
-// .logo:hover {
-//     cursor: pointer;
-//          }
-// .desktop_menu {
-//     /* padding: 1rem 2rem; */
-//     background: #59D0E1;
-//     color: white;
-//     margin-top: 10px;
-// }
-
-// .desktop_menu ul {
-   
-//     justify-content: center;
-//     list-style: none;
-//     padding: 0;
-//     margin:0;
-    
-// }
-
-// .desktop_menu ul li {
-//     padding: 1rem 2rem;
-//     transition: all ease .8s;
-//     border: solid #f4f4f4 1px;
-//     display: inline-block;
-//     margin-left: 24px;
-    
-// }
-
-// .desktop_menu ul li a {
-//     color: white;
-//     font-weight: bolder;
-//     text-decoration: none;
-//     list-style: none;
-// }
-
-// .desktop_menu ul li:hover{
-//     background-color: #cf2e2e;
-// }
-
-header {
-    padding: 10px;
+.header {
+    padding: 0px;
     background: #59D0E1;
     
   }
+  
   .logo {
-    width: 90px;
+    display: flex;
+    width: 100%;
+    padding: 0px;
+    justify-content: center;
   }
   .logo:hover {
     cursor: pointer;
@@ -63,9 +19,13 @@ header {
     
     margin-top: 24px;
   }
+
   .desktop_menu ul {
-    padding: 0;
-    margin: 0;
+    flex: 0 0 auto;
+        
+        width: 85%;
+        padding: 0;
+        justify-content: center;
   }
   .desktop_menu ul li {
     list-style-type: none;
@@ -83,6 +43,7 @@ header {
   }
   .menu-icon {
     display: none;
+    padding: 0;
   }
   
   @media screen and (min-width: 128px) and (max-width: 900px) {
@@ -94,6 +55,12 @@ header {
       background: #59D0E1;
       width: 280px;
       height: 100%;
+    }
+    .desktop_menu ul {
+      flex: 0 0 auto;
+      width: 85%;
+      padding: 0;
+      justify-content: center;
     }
     .desktop_menu ul li {
       display: block;
@@ -107,6 +74,7 @@ header {
       color: white;
       font-size: 40px;
       padding-top: 10px;
+      justify-content: right;
     }
     .mobile_menu {
       right: 0;
