@@ -1,0 +1,11 @@
+<div class="fmDatos">
+    <div class="fmDatos" *ngFor="let fmDato of datos">
+        <div class="info">
+            <h4>{{fmDato.name}}</h4>
+            <p>{{fmDato.email}}</p>
+            <p>{{fmDato.case}}</p>
+            <p>{{fmDato.message}}</p>
+            <button class="btn btn-outline-danger" (click)="onClickDelete(fmDato)">Borrar</button>
+        </div>
+    </div>
+</div>

@@ -29,5 +29,6 @@ export class NewFmdatosComponent implements OnInit {
     console.log(this.formulario.value)
     const response = await this.fmDatosService.addFmDatos(this.formulario.value);
     console.log(response);
+    this.formulario.reset()
   }
 }

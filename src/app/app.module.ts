@@ -21,6 +21,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { NewFmdatosComponent } from './components/new-fmdatos/new-fmdatos.component';
+import { FmdatosListComponent } from './components/fmdatos-list/fmdatos-list.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { NewFmdatosComponent } from './components/new-fmdatos/new-fmdatos.compon
     ContactoComponent,
     CaftaContenidoComponent,
     TransparenciaContenidoComponent,
-    NewFmdatosComponent
+    NewFmdatosComponent,
+    FmdatosListComponent
   ],
   imports: [
     BrowserModule,
