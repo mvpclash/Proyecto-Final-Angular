@@ -10,7 +10,8 @@
  }
  .sidebar button{
     width: 100%;
-    padding: 1rem;
+    padding: 20px;
+   border-radius: 8px;
     background-color:#59D0E1;
     border: none;
     cursor: pointer;
@@ -18,9 +19,9 @@
     font-weight: bold;
  }
 
- .formulario {
+ .elementos {
    background-color: azure ;
-   padding: 20px;
+   padding: 10px;
    border-radius: 8px;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
    width: 300px;
@@ -56,6 +57,34 @@
 }
 
 .btn:hover {
-   background-color: #59D0E1;
+   background-color: #969499;
 }
 
+.desktop_menu {
+   transition: 0.4s ease-in-out;
+   top: 64px;
+   background: #969499;
+   color:white;
+   width: 280px;
+   height: 100%;
+ }
+ .desktop_menu ul {
+   flex: 0 0 auto;
+   width: 85%;
+   padding: 0;
+   justify-content: center;
+ }
+ .desktop_menu ul li {
+   display: block;
+   text-align: left;
+   margin: 0;
+   padding: 10px 0 10px 26px;
+   border-bottom: 1px solid grey;
+ }
+ .desktop_menu ul li:hover {
+   font-size: 19px;
+   font-weight: bold;
+   cursor: pointer;
+   background-color: #59D0E1;
+   transition: 0.3s ease-in-out;
+ }
