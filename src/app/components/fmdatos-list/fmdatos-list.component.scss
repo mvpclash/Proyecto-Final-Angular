@@ -1,13 +1,20 @@
-.fmDatos {
-    border: 1px solid black;
-    border-radius: 20px;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    overflow: hidden;
-    margin-bottom: 20px;
-}
-
-.fmDatos .info {
-    padding: 10px 20px;
-}
-
+ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  li p {
+    margin: 5px 0;
+  }
+  
+  strong {
+    color: #333;
+  }

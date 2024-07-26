@@ -1,7 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Firestore, collection, addDoc, collectionData, doc, deleteDoc } from '@angular/fire/firestore';
+import { Firestore, collection, addDoc, doc, deleteDoc, getDocs } from '@angular/fire/firestore';
+import { collectionData } from 'rxfire/firestore';
 import Fmdatos from '../interfaces/fmdatos.interface';
 import { Observable } from 'rxjs';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -15,16 +18,16 @@ export class FmdatosServiceService {
     return addDoc(fmDatosRef, fmDatos);
   }
 
-  getFmDatos(): Observable<Fmdatos[]> {
+
+  async getFmDatos(): Promise<any[]> {
     const fmDatosRef = collection(this.firestore, 'fmdatos');
-    console.log(fmDatosRef);
-    return collectionData(fmDatosRef, { idField: 'id' }) as Observable<Fmdatos[]>;
-  }
+    const querySnapshot = await getDocs(fmDatosRef);
+    return querySnapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data()
+    }));
 
-  deleteFmDatos(fmDatos: Fmdatos) {
-    const fmDatosRef = doc(this.firestore, `fmdatos/${fmDatos.id}`);
-    return deleteDoc(fmDatosRef);
   }
-
+  
 
 }

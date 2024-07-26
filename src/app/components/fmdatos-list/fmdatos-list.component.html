@@ -1,11 +1,14 @@
-<div class="fmDatos">
-    <div class="fmDatos" *ngFor="let fmDato of datos" >
-        <div class="info">
-            <h4>{{fmDato.name}}</h4>
-            <p>{{fmDato.email}}</p>
-            <p>{{fmDato.case}}</p>
-            <p>{{fmDato.message}}</p>
-            <button class="btn btn-outline-danger" (click)="onClickDelete(fmDato)">Borrar</button>
-        </div>
-    </div>
-</div>
+
+<div *ngIf="datos.length > 0; else noData">
+    <ul>
+      <li *ngFor="let dato of datos">
+        <p><strong>Nombre:</strong> {{ dato.name }}</p>
+        <p><strong>Email:</strong> {{ dato.email }}</p>
+        <p><strong>Caso:</strong> {{ dato.case }}</p>
+        <p><strong>Mensaje:</strong> {{ dato.message }}</p>
+      </li>
+    </ul>
+  </div>
+  <ng-template #noData>
+    <p>No hay datos disponibles.</p>
+  </ng-template>

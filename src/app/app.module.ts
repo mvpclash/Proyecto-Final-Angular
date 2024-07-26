@@ -24,6 +24,7 @@ import { NewFmdatosComponent } from './components/new-fmdatos/new-fmdatos.compon
 import { FmdatosListComponent } from './components/fmdatos-list/fmdatos-list.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

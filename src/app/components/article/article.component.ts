@@ -8,12 +8,6 @@ import JsonPlaceHolderModel from 'src/app/models/jsonPlaceHolder.model';
 })
 export class ArticleComponent implements OnInit {
 
-  // @Input() articulo: JsonPlaceHolderModel = {
-  //   userId: 0,
-  //   id: 0,
-  //   title: "",
-  //   body: ""
-  // };
 
   constructor() { }
 

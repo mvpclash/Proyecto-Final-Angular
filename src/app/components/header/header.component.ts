@@ -6,26 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  // isMenuOpen = false;
-  // public urls : string[] = [
-  //   'Inicio',
-  //   'Transparencia',
-  //   'Cafta',
-  //   'Contacto'
-  // ]
-  // toggleMenu(): void {
-  //   this.isMenuOpen = !this.isMenuOpen;
-  // }
-  // constructor() { }
-  // menu_icon_variable: boolean = false;
-  // menuVariable: boolean = false;
+ 
 
   ngOnInit(): void {
   }
-  // openMenu() {
-  //   this.menuVariable =! this.menuVariable;
-  //   this.menu_icon_variable =! this.menu_icon_variable;
-  // }
+  
 
   menuValue:boolean=false;
  menu_icon :string ='bi bi-list';

@@ -9,30 +9,25 @@ import { FmdatosServiceService } from 'src/app/services/fmdatos-service.service'
 })
 export class FmdatosListComponent implements OnInit {
   
-  datos : FmDatos[];
+  datos : any[] = [];
 
  
   constructor(private fmDatosService: FmdatosServiceService) { 
-    this.datos = [{
-      name: '',
-      email: '',
-      case: '',
-      message: ''
-    }];
+    
   }
 
   ngOnInit(): void {
-    this.fmDatosService.getFmDatos().subscribe(datos =>{
-      console.log(datos);
-      this.datos = datos;
-    })
+    this.cargarFmDatos();
+  }
+  
+  async cargarFmDatos() {
+    try {
+      this.datos = await this.fmDatosService.getFmDatos();
+    } catch (error) {
+      console.error('Ocurrió un error al cargar los datos:', error);
+    }
   }
 
-
-  async onClickDelete(fmDato: FmDatos) {
-    const response = await this.fmDatosService.deleteFmDatos(fmDato);
-    console.log(response);
-  }
 
   
 
