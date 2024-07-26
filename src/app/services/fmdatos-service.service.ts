@@ -17,6 +17,7 @@ export class FmdatosServiceService {
 
   getFmDatos(): Observable<Fmdatos[]> {
     const fmDatosRef = collection(this.firestore, 'fmdatos');
+    console.log(fmDatosRef);
     return collectionData(fmDatosRef, { idField: 'id' }) as Observable<Fmdatos[]>;
   }
 

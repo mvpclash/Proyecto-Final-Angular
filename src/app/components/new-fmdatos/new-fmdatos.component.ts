@@ -15,10 +15,10 @@ export class NewFmdatosComponent implements OnInit {
     private fmDatosService: FmdatosServiceService
   ) { 
     this.formulario = new FormGroup({
-      name: new FormControl(),
-      email: new FormControl(),
-      case: new FormControl(),
-      message: new FormControl()
+      name: new FormControl('', Validators.required),
+      email: new FormControl('', [Validators.required, Validators.email]),
+      case: new FormControl('', Validators.required),
+      message: new FormControl('', Validators.required)
     })
   }
  
@@ -26,9 +26,16 @@ export class NewFmdatosComponent implements OnInit {
   }
 
   async onSubmit() {
-    console.log(this.formulario.value)
+    
+    if (this.formulario.valid) {
+      console.log(this.formulario.value)
     const response = await this.fmDatosService.addFmDatos(this.formulario.value);
     console.log(response);
     this.formulario.reset()
+    } else {
+      
+      alert('Por favor, completa todos los campos correctamente.');
+    }
   }
+  
 }

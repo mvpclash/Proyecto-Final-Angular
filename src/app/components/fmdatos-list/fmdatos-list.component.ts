@@ -23,13 +23,14 @@ export class FmdatosListComponent implements OnInit {
 
   ngOnInit(): void {
     this.fmDatosService.getFmDatos().subscribe(datos =>{
+      console.log(datos);
       this.datos = datos;
     })
   }
 
 
-  async onClickDelete(fmdatos: FmDatos) {
-    const response = await this.fmDatosService.deleteFmDatos(fmdatos);
+  async onClickDelete(fmDato: FmDatos) {
+    const response = await this.fmDatosService.deleteFmDatos(fmDato);
     console.log(response);
   }
 
