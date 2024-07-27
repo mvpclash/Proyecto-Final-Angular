@@ -1,7 +1,7 @@
 
-<div *ngIf="datos.length > 0; else noData">
-    <ul>
-      <li *ngFor="let dato of datos">
+<div *ngIf="datos.length > 0; else noData"> <!-- Si hay datos (la longitud de 'datos' es mayor que 0) -->
+    <ul> <!-- Inicio de una lista no ordenada -->
+      <li *ngFor="let dato of datos"> <!-- Por cada elemento 'dato' en el arreglo 'datos' -->
         <p><strong>Nombre:</strong> {{ dato.name }}</p>
         <p><strong>Email:</strong> {{ dato.email }}</p>
         <p><strong>Caso:</strong> {{ dato.case }}</p>
@@ -9,6 +9,6 @@
       </li>
     </ul>
   </div>
-  <ng-template #noData>
-    <p>No hay datos disponibles.</p>
+  <ng-template #noData>  <!-- Si no hay datos (la longitud de 'datos' es 0 o menos) -->
+    <p>No hay datos disponibles.</p> <!-- Muestra un mensaje indicando que no hay datos -->
   </ng-template>

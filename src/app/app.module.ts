@@ -47,8 +47,9 @@ import { FmdatosListComponent } from './components/fmdatos-list/fmdatos-list.com
     FormsModule, 
     AppRoutingModule,
     ReactiveFormsModule,
+    //Imports de Firebase se generan al instalar las librerias del mismo
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
+    provideAuth(() => getAuth()), 
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore())
   ],

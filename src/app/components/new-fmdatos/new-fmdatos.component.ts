@@ -8,12 +8,13 @@ import { FmdatosServiceService } from 'src/app/services/fmdatos-service.service'
   styleUrls: ['./new-fmdatos.component.scss']
 })
 export class NewFmdatosComponent implements OnInit {
- 
+  // Declaración de la variable formulario como FormGroup
   formulario: FormGroup;
  
   constructor(
     private fmDatosService: FmdatosServiceService
   ) { 
+     // Inicialización del formulario con controles y validadores
     this.formulario = new FormGroup({
       name: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
@@ -26,12 +27,13 @@ export class NewFmdatosComponent implements OnInit {
   }
 
   async onSubmit() {
-    
+    // Método que se ejecuta al enviar el formulario
     if (this.formulario.valid) {
-      console.log(this.formulario.value)
-    const response = await this.fmDatosService.addFmDatos(this.formulario.value);
-    console.log(response);
-    this.formulario.reset()
+      // Si el formulario es válido (todos los campos cumplen las validaciones)
+      console.log(this.formulario.value) // Muestra los valores del formulario en la consola
+    const response = await this.fmDatosService.addFmDatos(this.formulario.value); // Llama al servicio fmDatosService para agregar los datos al backend Firestore
+    console.log(response); // Muestra la respuesta del servicio en la consola
+    this.formulario.reset() // Reinicia los valores del formulario
     } else {
       
       alert('Por favor, completa todos los campos correctamente.');

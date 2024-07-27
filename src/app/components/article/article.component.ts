@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import JsonPlaceHolderModel from 'src/app/models/jsonPlaceHolder.model';
+
 
 @Component({
   selector: 'app-article',
