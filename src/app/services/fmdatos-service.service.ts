@@ -1,3 +1,4 @@
+/* Esta clase TypeScript proporciona métodos para agregar y recuperar objetos Fmdatos de una colección Firestore llamada ‘fmdatos’.  */
 import { Injectable } from '@angular/core';
 import { Firestore, collection, addDoc, getDocs } from '@angular/fire/firestore';
 import Fmdatos from '../interfaces/fmdatos.interface';
