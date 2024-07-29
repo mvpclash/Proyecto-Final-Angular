@@ -12,7 +12,7 @@ ejecutar npm install para instalar todas las dependencias del proyecto.
 
 npm i firebase
 
-npm npm install -g firebase-tools@11.23.1   Se especifica versión porque es la compatible con la versión instalada de node js
+npm install -g firebase-tools@11.23.1   Se especifica versión porque es la compatible con la versión instalada de node js
 
 en el archivo enviroment agregar lo siguiente:
 
